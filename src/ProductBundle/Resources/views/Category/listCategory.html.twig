@@ -1,0 +1,27 @@
+{% extends "@Product/Default/indexpro1.html.twig" %}
+{% block container %}
+
+
+
+    <h1>Category List:</h1>
+
+    <table border="2">
+        <tr>
+            <th>Category ID</th>
+            <th>Category Name</th>
+            <th>Category Type</th>
+            <th>PRODUCT ID</th>
+        </tr>
+        {% for i in category %}
+            <tr>
+                <td>Category{{ i.id }}</td>
+                <td>{{ i.nomcat }}</td>
+                <td>{{ i.souscat }}</td>
+                <td>{{ i.Product.id }}</td>
+
+                <td><a href="{{ path('delete_category',{'id':i.id}) }}">Delete</a> </td>
+                <td><a href="{{ path('update_category',{'id':i.id}) }}">Update</a> </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

@@ -1,0 +1,27 @@
+recruitment_homepage:
+    path:     /
+    defaults: { _controller: RecruitmentBundle:Default:index }
+seller_add:
+    path: /addseller
+    defaults: {_controller: RecruitmentBundle:Seller:AddSeller}
+list_seller:
+    path: /listseller
+    defaults: {_controller: RecruitmentBundle:Seller:ListSeller}
+delete_seller:
+    path: /deleteseller/{id}
+    defaults: {_controller: RecruitmentBundle:Seller:DeleteSeller}
+update_seller:
+    path: /updateseller/{id}
+    defaults: {_controller: RecruitmentBundle:Seller:UpdateSeller}
+professional_add:
+    path: /addprofessional
+    defaults: {_controller: RecruitmentBundle:Professional:AddPro}
+list_professional:
+    path: /listprofessional
+    defaults: {_controller: RecruitmentBundle:Professional:ListPro}
+delete_professional:
+    path: /deleteprofessional/{id}
+    defaults: {_controller: RecruitmentBundle:Professional:DeletePro}
+update_professional:
+    path: /updateprofessional/{id}
+    defaults: {_controller: RecruitmentBundle:Professional:UpdatePro}
